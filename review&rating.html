@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Review and Rating</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .rating label {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .rating input {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hotel Review and Rating</h2>
+
+        <!-- Review Form -->
+        <form action="submit_review.php" method="POST">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Rating -->
+            <div class="form-group rating">
+                <label for="rating">Rate the Hotel:</label><br>
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">⭐</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">⭐</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">⭐</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">⭐</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">⭐</label>
+            </div>
+
+            <!-- Review -->
+            <div class="form-group">
+                <label for="review">Your Review:</label>
+                <textarea id="review" name="review" rows="4" placeholder="Write your review here" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+</body>
+</html>

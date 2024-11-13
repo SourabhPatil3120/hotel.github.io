@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="header-top">
+                <div class="logo" >
+                    <a href="index.html" class="image-container" >
+                        <img src="images/logo2.png" title="logo" class="resize-image1"/></a>
+                </div>
+                <div class="contact-info">
+                    <p class="phone">Call us : <a href="#">980XXXXXXX</a></p>
+                    <p class="gpa">Gpa : <a href="https://www.google.co.in/maps/place/HASHTAG+KOLHAPUR+-+Best+Thali+Restaurant/@16.7154175,74.2408411,20z/data=!4m6!3m5!1s0x3bc10120b20eb04d:0xb5efe12de3a6152b!8m2!3d16.7154283!4d74.2408754!16s%2Fg%2F11vwfnzgdw?entry=ttu">View map</a></p>
+                    <p class="code">BROUGHT TO YOU BY:  juber&ajit</p>
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+        <div class="header-top-nav">
+            <div class="wrap">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <div class="clear"> </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+<form action="">
+    <!--  General -->
+    <div class="form-group">
+      <h2 class="heading">Booking & contact</h2>
+      <div class="controls">
+        <input type="text" id="name" class="floatLabel" name="name" placeholder="name">
+       
+      </div>
+      <div class="controls">
+        <input type="text" id="email" class="floatLabel" name="email" placeholder="email">
+       
+      </div>       
+      <div class="controls">
+        <input type="tel" id="phone" class="floatLabel" name="phone" placeholder="phone">
+      
+      </div>
+        <div class="grid">
+          <div class="col-2-3">
+            <div class="controls">
+             <input type="text" id="street" class="floatLabel" name="street" placeholder="street">
+          
+            </div>          
+          </div>
+          <div class="col-1-3">
+            <div class="controls">
+              <input type="number" id="street-number" class="floatLabel" name="street-number" placeholder="street-number">
+              
+            </div>          
+          </div>
+        </div>
+        <div class="grid">
+          <div class="col-2-3">
+            <div class="controls">
+              <input type="text" id="city" class="floatLabel" name="city" placeholder="city">
+            
+            </div>         
+          </div>
+          <div class="col-1-3">
+            <div class="controls">
+              <input type="text" id="post-code" class="floatLabel" name="post-code" placeholder="post-code">
+            
+            </div>         
+          </div>
+        </div>
+        <div class="controls">
+          <input type="text" id="country" class="floatLabel" name="country" placeholder="country">
+          
+        </div>
+    </div>
+    <!--  Details -->
+    <div class="form-group">
+      <h2 class="heading">Details</h2>
+      <div class="grid">
+      <div class="col-1-4 col-1-4-sm">
+        <div class="controls">
+          <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>" placeholder="name">
+         
+        </div>      
+      </div>
+      <div class="col-1-4 col-1-4-sm">
+        <div class="controls">
+          <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>"  placeholder="depart" />
+         
+        </div>      
+      </div>
+        </div>
+        <div class="grid">
+      <div class="col-1-3 col-1-3-sm">
+        <div class="controls">
+          <i class="fa fa-sort"></i>
+          <select class="floatLabel">
+            <option value="blank"></option>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+          </select>
+          <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
+        </div>      
+      </div>
+      <div class="col-1-3 col-1-3-sm">
+      <div class="controls">
+        <i class="fa fa-sort"></i>
+        <select class="floatLabel">
+          <option value="blank"></option>
+          <option value="deluxe" selected>With Bathroom</option>
+          <option value="Zuri-zimmer">Without Bathroom</option>
+        </select>
+        <label for="fruit">Room</label>
+       </div>     
+      </div>
+  
+     
+        
+       </div>
+        <div class="grid">
+          <p class="info-text">Please describe your needs e.g. Extra beds, children's cots</p>
+          <br>
+          <div class="controls">
+            <textarea name="comments" class="floatLabel" id="comments"></textarea>
+            <label for="comments">Comments</label>
+            </div>
+              <button type="submit" value="Submit" name="submitbooking" class="col-1-4">Submit</button>
+
+        </div>  
+    </div> <!-- /.form-group -->
+  </form>
+  <script>
+    const submitbooking=document.getElementsByName("submitbooking")[0];
+    submitbooking.addEventListener("click",()=>{
+        alert("your room is successfully booking");
+    })
+  </script>
+</body>
+
+</html>

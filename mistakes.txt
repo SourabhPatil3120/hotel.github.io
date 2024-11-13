@@ -1,0 +1,6 @@
+2.  phone number is incorrect                                           /// problem solved
+3. no shallow remarks in input                                          /// problem solved
+4. logo 2 is needed to be changed
+5. feedback is text convert it into button with click on event          /// problem solved
+6. submit button color
+ 

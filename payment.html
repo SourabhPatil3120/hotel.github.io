@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            width: 50%;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hotel Room Booking & Payment</h1>
+</header>
+
+<div class="container">
+    <h2>Complete Your Booking</h2>
+    <form id="bookingForm">
+        <!-- Room Selection -->
+        <div class="form-group">
+            <label for="roomType">Select Room Type</label>
+            <select id="roomType" name="roomType" required>
+                <option value="">--Choose a Room--</option>
+                <option value="single">Single Room - $100 per night</option>
+                <option value="double">Double Room - $150 per night</option>
+                <option value="suite">Suite - $250 per night</option>
+            </select>
+        </div>
+
+        <!-- Date Range Selection -->
+        <div class="form-group">
+            <label for="checkinDate">Check-in Date</label>
+            <input type="date" id="checkinDate" name="checkinDate" required>
+        </div>
+        <div class="form-group">
+            <label for="checkoutDate">Check-out Date</label>
+            <input type="date" id="checkoutDate" name="checkoutDate" required>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <!-- Payment Information -->
+        <div class="form-group">
+            <label for="cardNumber">Credit/Debit Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
+        </div>
+        <div class="form-group">
+            <label for="expDate">Expiration Date</label>
+            <input type="month" id="expDate" name="expDate" required>
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the <a href="#">terms and conditions</a>
+            </label>
+        </div>
+
+        <div class="button-container">
+            <button type="submit" class="submit-btn">Confirm Booking & Pay</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // For now, just show a confirmation message
+        alert('Your booking is confirmed. Thank you for your payment!');
+        
+        // Clear the form after submission
+        document.getElementById('bookingForm').reset();
+    });
+</script>
+
+</body>
+</html>
